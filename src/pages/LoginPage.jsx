@@ -39,53 +39,53 @@ const LoginPage = () => {
     return (
         <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
             {/* Background Glows */}
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] animate-pulse"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/20 rounded-full blur-[100px] animate-pulse delay-1000"></div>
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-600/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-600/20 rounded-full blur-[100px] animate-pulse delay-1000"></div>
 
-            <div className="glass-card p-8 w-full max-w-md transform transition-all hover:scale-[1.01] relative z-10 neon-border">
-                <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-react-glow-lg animate-float">
-                        <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="glass-card p-12 w-full max-w-2xl transform transition-all hover:scale-[1.01] relative z-10 neon-border">
+                <div className="flex justify-center mb-8">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-orange-500 to-yellow-500 flex items-center justify-center shadow-react-glow-lg animate-float">
+                        <svg className="w-14 h-14 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                         </svg>
                     </div>
                 </div>
 
-                <h2 className="text-3xl font-bold mb-2 text-center text-white drop-shadow-lg">Welcome Back</h2>
-                <p className="text-gray-400 text-center mb-8 text-sm">Enter your credentials to access your account</p>
+                <h2 className="text-4xl font-bold mb-3 text-center text-white drop-shadow-lg">Welcome Back</h2>
+                <p className="text-yellow-400 text-center mb-10 text-base">Enter your credentials to access your account</p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="group">
-                        <label className="block text-sm font-medium text-gray-300 mb-1 group-focus-within:text-react-blue transition-colors">Email Address</label>
+                        <label className="block text-base font-medium text-yellow-300 mb-2 group-focus-within:text-react-blue transition-colors">Email Address</label>
                         <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full glass-input p-3 rounded-xl outline-none"
+                            className="w-full glass-input p-4 rounded-xl outline-none text-lg"
                             placeholder="you@example.com"
                             required
                         />
                     </div>
                     <div className="group">
-                        <label className="block text-sm font-medium text-gray-300 mb-1 group-focus-within:text-react-blue transition-colors">Password</label>
+                        <label className="block text-base font-medium text-yellow-300 mb-2 group-focus-within:text-react-blue transition-colors">Password</label>
                         <input
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="w-full glass-input p-3 rounded-xl outline-none"
+                            className="w-full glass-input p-4 rounded-xl outline-none text-lg"
                             placeholder="••••••••"
                             required
                         />
                     </div>
                     <button
                         type="submit"
-                        className="w-full glass-button p-3 rounded-xl font-bold tracking-wide mt-2"
+                        className="w-full glass-button p-4 rounded-xl font-bold tracking-wide mt-2 text-lg"
                     >
                         Sign In
                     </button>
                 </form>
-                <p className="mt-8 text-center text-sm text-gray-400">
-                    Don't have an account? <Link to="/register" className="text-react-blue font-medium hover:text-cyan-300 transition underline-offset-4 hover:underline decoration-react-blue/50">Register now</Link>
+                <p className="mt-10 text-center text-base text-yellow-400">
+                    Don't have an account? <Link to="/register" className="text-react-blue font-medium hover:text-orange-300 transition underline-offset-4 hover:underline decoration-react-blue/50">Register now</Link>
                 </p>
             </div>
         </div>
