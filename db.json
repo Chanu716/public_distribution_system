@@ -1,0 +1,127 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Rama",
+      "email": "rama@example.com",
+      "password": "password",
+      "role": "user",
+      "rationCardId": "RC123456"
+    },
+    {
+      "id": "2",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": "2565",
+      "name": "New User 2",
+      "email": "new2@example.com",
+      "password": "password",
+      "rationCardId": "RC888888",
+      "role": "user"
+    },
+    {
+      "id": "e19b",
+      "name": "santosh",
+      "email": "santoshyarrabotula@gmail.com",
+      "password": "santosh",
+      "rationCardId": "R2311421",
+      "role": "user"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b1dc",
+      "userId": "2565",
+      "userName": "New User 2",
+      "rationCardId": "RC888888",
+      "slotDate": "2026-02-05",
+      "slotWindow": "11:00-12:00",
+      "month": "2026-02",
+      "status": "cancelled",
+      "createdAt": "2025-11-30T19:19:00.703Z",
+      "notes": ""
+    },
+    {
+      "id": "6d34",
+      "userId": "2565",
+      "userName": "New User 2",
+      "rationCardId": "RC888888",
+      "slotDate": "2025-12-04",
+      "slotWindow": "09:00-10:00",
+      "month": "2025-12",
+      "status": "delivered",
+      "createdAt": "2025-11-30T19:38:13.248Z",
+      "notes": ""
+    },
+    {
+      "id": "b3b3",
+      "userId": "1",
+      "userName": "Rama",
+      "rationCardId": "RC123456",
+      "slotDate": "2025-12-02",
+      "slotWindow": "09:00-10:00",
+      "month": "2025-12",
+      "status": "delivered",
+      "createdAt": "2025-11-30T19:43:16.305Z",
+      "notes": ""
+    },
+    {
+      "id": "629d",
+      "userId": "e19b",
+      "userName": "santosh",
+      "rationCardId": "R2311421",
+      "slotDate": "2025-12-05",
+      "slotWindow": "09:00-10:00",
+      "month": "2025-12",
+      "status": "delivered",
+      "createdAt": "2025-11-30T20:00:37.195Z",
+      "notes": ""
+    },
+    {
+      "id": "2960",
+      "userId": "1",
+      "userName": "Rama",
+      "rationCardId": "RC123456",
+      "slotDate": "2026-01-02",
+      "slotWindow": "09:00-10:00",
+      "month": "2026-01",
+      "status": "delivered",
+      "createdAt": "2025-11-30T20:36:51.181Z",
+      "notes": ""
+    },
+    {
+      "id": "61d6",
+      "userId": "e19b",
+      "userName": "santosh",
+      "rationCardId": "R2311421",
+      "slotDate": "2026-02-03",
+      "slotWindow": "09:00-10:00",
+      "month": "2026-02",
+      "status": "delivered",
+      "createdAt": "2025-12-01T04:30:57.170Z",
+      "notes": ""
+    }
+  ],
+  "slotWindows": [
+    {
+      "id": "1",
+      "time": "09:00-10:00"
+    },
+    {
+      "id": "2",
+      "time": "10:00-11:00"
+    },
+    {
+      "id": "3",
+      "time": "11:00-12:00"
+    },
+    {
+      "id": "4",
+      "time": "16:00-17:00"
+    }
+  ]
+}
