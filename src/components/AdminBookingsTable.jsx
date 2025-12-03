@@ -19,7 +19,7 @@ const AdminBookingsTable = ({ bookings, onStatusUpdate }) => {
     };
 
     return (
-        <div className="glass-card overflow-hidden neon-border">
+        <div className="glass-card overflow-hidden neon-border backdrop-blur-2xl">
             <div className="overflow-x-auto">
                 <table className="min-w-full leading-normal">
                     <thead>
@@ -67,7 +67,7 @@ const AdminBookingsTable = ({ bookings, onStatusUpdate }) => {
                                     <p className="text-gray-300 whitespace-no-wrap">{booking.slotWindow}</p>
                                 </td>
                                 <td className="px-5 py-4 text-sm">
-                                    <span className={`relative inline-block px-3 py-1 font-bold leading-tight rounded-full text-xs border shadow-sm ${booking.status === 'booked' ? 'bg-blue-500/10 text-blue-300 border-blue-500/30 shadow-blue-500/10' :
+                                    <span className={`relative inline-block px-3 py-1 font-bold leading-tight rounded-full text-xs border shadow-sm ${booking.status === 'booked' ? 'bg-yellow-500/10 text-yellow-300 border-yellow-500/30 shadow-yellow-500/10' :
                                         booking.status === 'delivered' ? 'bg-green-500/10 text-green-300 border-green-500/30 shadow-green-500/10' :
                                             'bg-red-500/10 text-red-300 border-red-500/30 shadow-red-500/10'
                                         }`}>
