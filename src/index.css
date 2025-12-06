@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 body {
-    background-color: #000000;
+    background-color: #0a0a0a;
 }
 
 @theme {
-    --color-react-blue: #FF8C00;
-    --color-react-blue-glow: rgba(255, 140, 0, 0.5);
-    --color-glass-border: rgba(255, 165, 0, 0.2);
-    --color-glass-surface: rgba(255, 140, 0, 0.05);
+    --color-react-blue: #f97316;
+    --color-react-blue-glow: rgba(249, 115, 22, 0.15);
+    --color-glass-border: rgba(249, 115, 22, 0.15);
+    --color-glass-surface: rgba(249, 115, 22, 0.03);
 
-    --shadow-react-glow-sm: 0 0 8px rgba(255, 140, 0, 0.14);
-    --shadow-react-glow-md: 0 0 12px rgba(255, 140, 0, 0.18);
-    --shadow-react-glow-lg: 0 0 20px rgba(255, 140, 0, 0.25);
-    --shadow-react-glow-xl: 0 0 30px rgba(255, 140, 0, 0.3);
+    --shadow-react-glow-sm: 0 2px 8px rgba(249, 115, 22, 0.08);
+    --shadow-react-glow-md: 0 4px 12px rgba(249, 115, 22, 0.12);
+    --shadow-react-glow-lg: 0 6px 16px rgba(249, 115, 22, 0.15);
+    --shadow-react-glow-xl: 0 8px 20px rgba(249, 115, 22, 0.18);
 
-    --drop-shadow-react-glow: 0 0 5px rgba(255, 140, 0, 0.5);
+    --drop-shadow-react-glow: 0 2px 4px rgba(249, 115, 22, 0.2);
 
     --animate-float: float 6s ease-in-out infinite;
     --animate-glow: glow 2s ease-in-out infinite alternate;
@@ -44,12 +44,10 @@ body {
 }
 
 body {
-    @apply bg-black text-yellow-100 font-sans antialiased overflow-x-hidden;
-    background-color: #000000;
-    /* Fallback dark color */
-    background-image: radial-gradient(circle at 50% 50%, #1a0a00 0%, #000000 100%);
+    @apply bg-gray-950 text-gray-100 font-sans antialiased overflow-x-hidden;
+    background-color: #0a0a0a;
+    background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0a0a0a 100%);
     min-height: 100vh;
-    /* Hide default cursor for custom one */
 }
 
 /* Mobile cursor reset */
@@ -60,32 +58,32 @@ body {
 }
 
 .glass {
-    @apply backdrop-blur-2xl bg-orange-900/10 border-b border-orange-500/20 shadow-xl;
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.05) 0%, rgba(0, 0, 0, 0.4) 100%);
+    @apply backdrop-blur-xl bg-gray-900/40 border-b border-gray-800/60 shadow-lg;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .glass-card {
-    @apply backdrop-blur-3xl bg-black/60 border border-orange-500/30 shadow-2xl rounded-2xl transition-all duration-300 hover:shadow-react-glow-md hover:border-react-blue/50;
-    background: linear-gradient(135deg, rgba(255, 140, 0, 0.08) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 215, 0, 0.05) 100%);
-    box-shadow: 0 8px 32px 0 rgba(255, 140, 0, 0.1), inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
+    @apply backdrop-blur-xl bg-gray-900/50 border border-gray-800/50 shadow-xl rounded-2xl transition-all duration-300 hover:shadow-react-glow-md hover:border-orange-500/30;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.6) 0%, rgba(10, 10, 10, 0.7) 100%);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .glass-input {
-    @apply bg-black/70 border border-orange-700/50 text-yellow-100 placeholder-yellow-600 focus:border-react-blue focus:ring-2 focus:ring-react-blue focus:shadow-react-glow-sm transition-all duration-300;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(26, 10, 0, 0.8) 100%);
+    @apply bg-gray-900/60 border border-gray-700/60 text-gray-100 placeholder-gray-500 focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 transition-all duration-300;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
 }
 
 .glass-button {
-    @apply bg-gradient-to-r from-orange-600 to-yellow-500 hover:from-orange-500 hover:to-yellow-400 text-black font-medium shadow-xl hover:shadow-react-glow-md transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95;
-    box-shadow: 0 4px 15px 0 rgba(255, 140, 0, 0.3);
+    @apply bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-500 hover:to-orange-400 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95;
+    box-shadow: 0 4px 12px 0 rgba(249, 115, 22, 0.25);
 }
 
 .neon-text {
-    @apply text-react-blue drop-shadow-react-glow;
+    @apply text-orange-500 drop-shadow-sm;
 }
 
 .neon-border {
-    @apply border border-react-blue/30 shadow-react-glow-sm;
+    @apply border border-gray-800/60 shadow-sm;
 }
 
 /* Custom Scrollbar */
@@ -94,9 +92,9 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    @apply bg-black;
+    @apply bg-gray-950;
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-orange-700 rounded-full hover:bg-react-blue transition-colors;
+    @apply bg-gray-700 rounded-full hover:bg-orange-600 transition-colors;
 }

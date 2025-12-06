@@ -19,19 +19,19 @@ const BookingCard = ({ booking, onCancel }) => {
 
 
     return (
-        <div className="glass-card p-6 mb-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-react-glow-lg group neon-border backdrop-blur-2xl">
+        <div className="glass-card p-6 mb-4 transition-all duration-300 hover:scale-[1.01] hover:shadow-lg group">
             <div className="flex justify-between items-start">
                 <div>
                     <div className="flex items-center gap-2 mb-1">
-                        <span className="text-react-blue text-lg">📅</span>
-                        <p className="font-bold text-xl text-white group-hover:text-react-blue transition-colors">{booking.slotDate}</p>
+                        <span className="text-orange-500 text-lg">📅</span>
+                        <p className="font-bold text-xl text-white group-hover:text-orange-500 transition-colors">{booking.slotDate}</p>
                     </div>
-                    <p className="text-yellow-300 flex items-center gap-2 text-base">
-                        <span className="text-orange-500">⏰</span> {booking.slotWindow}
+                    <p className="text-gray-300 flex items-center gap-2 text-base">
+                        <span className="text-gray-500">⏰</span> {booking.slotWindow}
                     </p>
-                    <p className="text-xs text-yellow-500 mt-2 ml-6">Month: {booking.month}</p>
+                    <p className="text-xs text-gray-500 mt-2 ml-6">Month: {booking.month}</p>
                     <div className="mt-3 ml-6">
-                        <span className={`px-3 py-1 rounded-full text-xs font-bold tracking-wide border shadow-sm ${booking.status === 'booked' ? 'bg-yellow-500/10 text-yellow-300 border-yellow-500/30 shadow-yellow-500/10' :
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold tracking-wide border shadow-sm ${booking.status === 'booked' ? 'bg-orange-500/10 text-orange-400 border-orange-500/30' :
                             booking.status === 'delivered' ? 'bg-green-500/10 text-green-300 border-green-500/30 shadow-green-500/10' :
                                 'bg-red-500/10 text-red-300 border-red-500/30 shadow-red-500/10'
                             }`}>

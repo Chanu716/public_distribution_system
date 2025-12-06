@@ -35,25 +35,25 @@ const UserDashboard = () => {
     return (
         <div className="min-h-screen relative overflow-hidden">
             {/* Background Glows */}
-            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none"></div>
-            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-yellow-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-orange-500/3 rounded-full blur-[140px] pointer-events-none"></div>
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-orange-600/3 rounded-full blur-[140px] pointer-events-none"></div>
 
             {/* Navbar */}
-            <nav className="glass sticky top-0 z-50 backdrop-blur-2xl">
+            <nav className="glass sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16 items-center">
                         <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-orange-500 to-yellow-500 flex items-center justify-center shadow-react-glow-sm">
-                                <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-md">
+                                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
                             <h1 className="text-2xl font-bold text-white drop-shadow-md tracking-wide">
-                                Ration<span className="text-react-blue">Booking</span>
+                                Ration<span className="text-orange-500">Booking</span>
                             </h1>
                         </div>
                         <div className="flex items-center space-x-6">
-                            <span className="text-yellow-300 font-medium hidden sm:block">Welcome, <span className="text-react-blue">{user.name}</span></span>
+                            <span className="text-gray-300 font-medium hidden sm:block">Welcome, <span className="text-orange-500">{user.name}</span></span>
                             <button
                                 onClick={handleLogout}
                                 className="glass-button px-4 py-2 rounded-xl text-sm"
@@ -74,9 +74,9 @@ const UserDashboard = () => {
 
                     {/* Right Column: Bookings List */}
                     <div className="lg:col-span-3">
-                        <div className="glass-card p-8 min-h-[600px] neon-border backdrop-blur-2xl">
-                            <h2 className="text-2xl font-bold mb-8 text-white border-b border-orange-500/20 pb-4 flex items-center gap-2">
-                                <span className="text-react-blue">●</span> My Bookings
+                        <div className="glass-card p-8 min-h-[600px]">
+                            <h2 className="text-2xl font-bold mb-8 text-white border-b border-gray-800/60 pb-4 flex items-center gap-2">
+                                <span className="text-orange-500">●</span> My Bookings
                             </h2>
                             {bookings.length === 0 ? (
                                 <div className="text-center py-16">

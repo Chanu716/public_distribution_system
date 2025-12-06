@@ -76,16 +76,16 @@ const BookingForm = ({ onBookingSuccess }) => {
     // Get current date in YYYY-MM-DD format for min date
     const today = new Date().toISOString().split('T')[0];
     return (
-        <div className="glass-card p-8 mb-6 neon-border relative overflow-hidden backdrop-blur-2xl">
+        <div className="glass-card p-8 mb-6 relative overflow-hidden">
             {/* Subtle internal glow */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-            <h3 className="text-2xl font-bold mb-8 text-white border-b border-orange-500/20 pb-4 flex items-center gap-2">
-                <span className="text-react-blue">●</span> Book a Ration Slot
+            <h3 className="text-2xl font-bold mb-8 text-white border-b border-gray-800/60 pb-4 flex items-center gap-2">
+                <span className="text-orange-500">●</span> Book a Ration Slot
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="group">
-                    <label className="block text-base font-medium text-yellow-300 mb-2 group-focus-within:text-react-blue transition-colors">Select Date</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2 group-focus-within:text-orange-500 transition-colors">Select Date</label>
                     <input
                         type="date"
                         min={today}
@@ -94,12 +94,12 @@ const BookingForm = ({ onBookingSuccess }) => {
                         className="w-full glass-input p-4 rounded-xl outline-none text-lg"
                         required
                     />
-                    <p className="text-xs text-yellow-500 mt-2 flex items-center gap-1">
-                        <span className="text-react-blue">ℹ</span> Available only from 1st to 5th of each month.
+                    <p className="text-xs text-gray-500 mt-2 flex items-center gap-1">
+                        <span className="text-orange-500">ℹ</span> Available only from 1st to 5th of each month.
                     </p>
                 </div>
                 <div className="group">
-                    <label className="block text-base font-medium text-yellow-300 mb-2 group-focus-within:text-react-blue transition-colors">Select Time Slot</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2 group-focus-within:text-orange-500 transition-colors">Select Time Slot</label>
                     <select
                         value={selectedWindow}
                         onChange={(e) => setSelectedWindow(e.target.value)}

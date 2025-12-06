@@ -19,41 +19,41 @@ const AdminBookingsTable = ({ bookings, onStatusUpdate }) => {
     };
 
     return (
-        <div className="glass-card overflow-hidden neon-border backdrop-blur-2xl">
+        <div className="glass-card overflow-hidden">
             <div className="overflow-x-auto">
                 <table className="min-w-full leading-normal">
                     <thead>
-                        <tr className="bg-white/5">
-                            <th className="px-5 py-4 border-b border-white/10 text-left text-xs font-bold text-react-blue uppercase tracking-wider">
+                        <tr className="bg-gray-900/40">
+                            <th className="px-5 py-4 border-b border-gray-800/60 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
                                 User
                             </th>
-                            <th className="px-5 py-4 border-b border-white/10 text-left text-xs font-bold text-react-blue uppercase tracking-wider">
+                            <th className="px-5 py-4 border-b border-gray-800/60 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
                                 Ration Card
                             </th>
-                            <th className="px-5 py-4 border-b border-white/10 text-left text-xs font-bold text-react-blue uppercase tracking-wider">
+                            <th className="px-5 py-4 border-b border-gray-800/60 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
                                 Date
                             </th>
-                            <th className="px-5 py-4 border-b border-white/10 text-left text-xs font-bold text-react-blue uppercase tracking-wider">
+                            <th className="px-5 py-4 border-b border-gray-800/60 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
                                 Slot
                             </th>
-                            <th className="px-5 py-4 border-b border-white/10 text-left text-xs font-bold text-react-blue uppercase tracking-wider">
+                            <th className="px-5 py-4 border-b border-gray-800/60 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
                                 Status
                             </th>
-                            <th className="px-5 py-4 border-b border-white/10 text-left text-xs font-bold text-react-blue uppercase tracking-wider">
+                            <th className="px-5 py-4 border-b border-gray-800/60 text-left text-xs font-bold text-orange-500 uppercase tracking-wider">
                                 Actions
                             </th>
                         </tr>
                     </thead>
-                    <tbody className="divide-y divide-white/5">
+                    <tbody className="divide-y divide-gray-800/40">
                         {bookings.map((booking) => (
-                            <tr key={booking.id} className="hover:bg-white/5 transition-colors duration-200 group">
+                            <tr key={booking.id} className="hover:bg-gray-900/30 transition-colors duration-200 group">
                                 <td className="px-5 py-4 text-sm">
                                     <div className="flex items-center">
                                         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center text-xs font-bold text-white border border-white/10">
                                             {booking.userName.charAt(0).toUpperCase()}
                                         </div>
                                         <div className="ml-3">
-                                            <p className="text-white font-medium whitespace-no-wrap group-hover:text-react-blue transition-colors">{booking.userName}</p>
+                                            <p className="text-white font-medium whitespace-no-wrap group-hover:text-orange-500 transition-colors">{booking.userName}</p>
                                         </div>
                                     </div>
                                 </td>
@@ -67,7 +67,7 @@ const AdminBookingsTable = ({ bookings, onStatusUpdate }) => {
                                     <p className="text-gray-300 whitespace-no-wrap">{booking.slotWindow}</p>
                                 </td>
                                 <td className="px-5 py-4 text-sm">
-                                    <span className={`relative inline-block px-3 py-1 font-bold leading-tight rounded-full text-xs border shadow-sm ${booking.status === 'booked' ? 'bg-yellow-500/10 text-yellow-300 border-yellow-500/30 shadow-yellow-500/10' :
+                                    <span className={`relative inline-block px-3 py-1 font-bold leading-tight rounded-full text-xs border shadow-sm ${booking.status === 'booked' ? 'bg-orange-500/10 text-orange-400 border-orange-500/30' :
                                         booking.status === 'delivered' ? 'bg-green-500/10 text-green-300 border-green-500/30 shadow-green-500/10' :
                                             'bg-red-500/10 text-red-300 border-red-500/30 shadow-red-500/10'
                                         }`}>
